@@ -1,0 +1,50 @@
+
+*{
+    font-family:'Times New Roman', Times, serif
+}
+body{
+    background-color:#fde4e4;
+}
+h1{
+    text-transform:capitalize;
+}
+.heading{
+
+    
+    text-align:center;
+    color:rgb(93, 1, 1);
+    
+}
+#links {
+    text-align:center;
+}
+p{
+    color:rgb(157, 66, 66);
+}
+
+#site{
+    width:93.25px;
+}
+article{
+    
+    text-align:center;
+    color:rgb(157, 66, 66);
+}
+B{
+    color:rgb(157, 66, 66);
+}
+#box {
+    margin:-7px;
+    background-color:rgb(245, 199, 199);
+}
+a{
+    text-decoration: none;
+    color:rgb(157, 66, 66);
+}
+textarea{
+    background-color:#fddada;
+}
+FOOTER{
+    margin:-7px;
+    background-color:rgb(245, 199, 199);
+}
