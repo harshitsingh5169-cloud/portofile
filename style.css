@@ -1,9 +1,12 @@
 
 *{
-    font-family:'Times New Roman', Times, serif
+    font-family:'Times New Roman', Times, serif;
+    margin:0px;
+    padding:0px;
+    
 }
 body{
-    background-color:#fde4e4;
+    background-color:#EEC9CA;
 }
 h1{
     text-transform:capitalize;
@@ -12,14 +15,14 @@ h1{
 
     
     text-align:center;
-    color:rgb(93, 1, 1);
+    color:#4A1010;
     
 }
 #links {
     text-align:center;
 }
 p{
-    color:rgb(157, 66, 66);
+    color:#9E3337;
 }
 
 #site{
@@ -34,9 +37,14 @@ B{
     color:rgb(157, 66, 66);
 }
 #box {
-    margin:-7px;
-    background-color:rgb(245, 199, 199);
+
+    background-color:#4A1010;
+    height: 40px;
+    padding-top:15px;
+    padding-left: 20px;
+  
 }
+
 a{
     text-decoration: none;
     color:rgb(157, 66, 66);
