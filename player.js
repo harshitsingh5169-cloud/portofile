@@ -1,3 +1,5 @@
+
+
 const songs = {
     Carino: {
         file: "songs/carino.mp3",
@@ -47,6 +49,7 @@ songSelect.addEventListener("change", () => {
     loadSong(songSelect.value);
 
     if (playing) {
+        audio.volume = 0.3; 
         audio.play();
     }
 
@@ -56,7 +59,7 @@ songSelect.addEventListener("change", () => {
 playBtn.addEventListener("click", () => {
 
     if (audio.paused) {
-
+audio.volume = 0.3; 
         audio.play()
         .then(() => {
             playing = true;
@@ -87,7 +90,7 @@ nextBtn.addEventListener("click", () => {
     songSelect.selectedIndex = i;
 
     loadSong(songSelect.value);
-
+audio.volume = 0.3; 
     audio.play();
 
     playing = true;
@@ -109,7 +112,7 @@ prevBtn.addEventListener("click", () => {
     songSelect.selectedIndex = i;
 
     loadSong(songSelect.value);
-
+audio.volume = 0.3; 
     audio.play();
 
     playing = true;

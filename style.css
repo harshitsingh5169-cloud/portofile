@@ -9,7 +9,7 @@
 }
 body{
     
-   background-image: url("artworks/bacckground.png");/* Path to your image */
+   background-image: url("artworks/bacckground.gif");/* Path to your image */
   background-size: cover;                  /* Forces image to fill the whole screen */
   background-position: center;             /* Centers the image */
   background-repeat: no-repeat;            /* Prevents the image from tiling */
@@ -162,9 +162,9 @@ button:active {
   outline: none;                    /* Prevents the default browser focus ring */
 }
 #vol_button{
+    z-index:5;
     
-    
-    background-image: url("artworks/icons/volno.png");
+    background-image: url("artworks/icons/vol.png");
     background-size: 89%;
     background-repeat: no-repeat;
     position: absolute;
@@ -172,6 +172,9 @@ button:active {
     right:147px;
     width:30px;
     height:30px;
+}
+#vol_button.muted {
+  background-image: url("artworks/icons/volno.png"); /* Path to your muted icon */
 }
 #theme_button{
     background: transparent;

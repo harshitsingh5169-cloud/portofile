@@ -9,6 +9,7 @@
     <script src="taskbar.js" defer></script>
     <script src="cloud.js" defer></script>
      <script src="player.js" defer></script>
+      <script src="sfxs.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="windows.css">
 </head>
@@ -16,19 +17,19 @@
     <div id="main_screen">
         <div id="dekstop">
             <div class="exes">
-                <button class="apps" data-window="about_user_window" id="aboutz">
+                <button class="apps SFX1"  data-sound="audios/open.wav" data-window="about_user_window" id="aboutz">
                     <div id="about_me"></div>
                     <span>about</span>
                 </button>
-                <button class="apps" data-window="works_window" id="workz">
+                <button class="apps SFX1"  data-sound="audios/open.wav" data-window="works_window" id="workz">
                     <div id="works"></div>
                     <span>works</span>
                 </button>
-                <button class="apps" data-window="socialz_window" id="internetz">
+                <button class="apps SFX1"  data-sound="audios/open.wav" data-window="socialz_window" id="internetz">
                     <div id="socialz"></div>
                     <span>internet</span>
                 </button>
-                <button class="apps" data-window="skillz_window" id="contactz">
+                <button class="apps SFX1"  data-sound="audios/open.wav" data-window="skillz_window" id="contactz">
                     <div id="skillz"></div>
                     <span>contact</span>
                 </button>
@@ -49,8 +50,8 @@
                  <div class="windows2"></div>
                      <div id="titleBar" class="title-bar"><div class="titlebar1"></div><span>
                     About</span>
-                    <button class="minimize">_</button>
-                    <button class="close">✖</button>
+                    <button class="minimize SFX1"  data-sound="audios/close.wav">_</button>
+                    <button class="close SFX1"  data-sound="audios/close.wav">✖</button>
                     </div>
                     <div class="content">
 
@@ -136,8 +137,8 @@
                  <div class="windows2"></div>
                 <div id="works_titlebar" class="title-bar"><div class="titlebar1"></div><span>
                 workz</span>
-                <button class="minimize">_</button>
-                <button class="close">✖</button>
+                <button class="minimize SFX1"  data-sound="audios/close.wav">_</button>
+                <button class="close SFX1"  data-sound="audios/close.wav">✖</button>
                 </div>
                 <div class="content">
 
@@ -151,12 +152,12 @@
                                                 <h2>Tools</h2>
 
                                                 <div class="tag-container">
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">Visual Studio</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">Krita</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">LibreSprite</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">Godot</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">Figma</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">Logisim</div></div>
+                                                    <div class="tag SFX"  data-sound="audios/Track1_Instrument.m4a"><div class="outtag"></div><div class="intag">Visual Studio</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track2_Instrument.m4a"><div class="outtag"></div><div class="intag">Krita</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track3_Instrument.m4a"><div class="outtag"></div><div class="intag">LibreSprite</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track4_Instrument.m4a"><div class="outtag"></div><div class="intag">Godot</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track5_Instrument.m4a"><div class="outtag"></div><div class="intag">Figma</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track6_Instrument.m4a"><div class="outtag"></div><div class="intag">Logisim</div></div>
                                                 </div>
 
                                                 <div class="divider"></div>
@@ -167,12 +168,12 @@
                                                 <h2>Development</h2>
 
                                                 <div class="tag-container">
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">C++</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">C</div></div>
-                                                   <div class="tag"><div class="outtag"></div><div class="intag">Python</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">Java</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">HTML</div></div>
-                                                    <div class="tag"><div class="outtag"></div><div class="intag">CSS</div></div>
+                                                    <div class="tag SFX"  data-sound="audios/Track7_Instrument.m4a"><div class="outtag"></div><div class="intag">C++</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track8_Instrument.m4a"><div class="outtag"></div><div class="intag">C</div></div>
+                                                   <div class="tag SFX"   data-sound="audios/Track9_Instrument.m4a"><div class="outtag"></div><div class="intag">Python</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track10_Instrument.m4a"><div class="outtag"></div><div class="intag">Java</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track11_Instrument.m4a"><div class="outtag"></div><div class="intag">HTML</div></div>
+                                                    <div class="tag SFX"   data-sound="audios/Track12_Instrument.m4a"><div class="outtag"></div><div class="intag">CSS</div></div>
                                                 </div>
 
                                                 <div class="divider"></div>
@@ -199,8 +200,8 @@
                  <div class="windows2"></div>
                 <div id="socialz_titlebar" class="title-bar"><div class="titlebar1"></div><span>
                 socialz</span>
-                <button class="minimize">_</button>
-                <button class="close">✖</button>
+                <button class="minimize SFX1"  data-sound="audios/close.wav">_</button>
+                <button class="close SFX1"  data-sound="audios/close.wav">✖</button>
                 </div>
                 <div class="content">
                        
@@ -209,16 +210,16 @@
                     
                             <div id="links">
                                 <a href="https://www.instagram.com/garm.chasni.ki.pyaas/"  target="_blank" rel="noopener noreferrer">
-                            <button id="insta"><span>instagram</span></button> </a>
+                            <button id="insta" class="SFX1"  data-sound="audios/open.wav"><span>instagram</span></button> </a>
                             <a href="https://in.pinterest.com/elevated_child/"  target="_blank" rel="noopener noreferrer">
-                            <button  id="pin"><span>pintrest</span></button></a>
+                            <button  id="pin" class="SFX1"  data-sound="audios/open.wav"><span>pintrest</span></button></a>
                              <a href="https://www.youtube.com/@elevated_child"  target="_blank" rel="noopener noreferrer">
-                            <button id="youtube"><span>youtube</span></button></a>
+                            <button id="youtube" class="SFX1"  data-sound="audios/open.wav"><span>youtube</span></button></a>
                              <a href="https://discord.gg/edubVztJua"  target="_blank" rel="noopener noreferrer">
-                            <button id="discord"><span>discord</span></button></a>
+                            <button id="discord" class="SFX1"  data-sound="audios/open.wav"><span>discord</span></button></a>
                             <bar></bar>
                              <a href="https://www.chess.com/member/yellonit"  target="_blank" rel="noopener noreferrer">
-                            <button id="chess"><span>chess</span></button></a>
+                            <button id="chess" class="SFX1"  data-sound="audios/open.wav"><span>chess</span></button></a>
                             </div>
                             <div id="links_below"><span>These are the some platforms me's active on <bar></bar>
                                <b> CHALLENNGE ME ON CHESS BTCH!!!</b></span></div>
@@ -241,8 +242,8 @@
                 <div id="skillz_titlebar" class="title-bar">
                     <div class="titlebar1"></div><span>
                 contact</span>
-                <button class="minimize">_</button>
-                <button class="close">✖</button>
+                <button class="minimize SFX1"  data-sound="audios/close.wav">_</button>
+                <button class="close SFX1"  data-sound="audios/close.wav">✖</button>
                 </div>
                 <div class="content">
                     
@@ -310,28 +311,25 @@
         
         <div id="taskbar">
             <div id="taskbar0"></div>
-            <button id="start_button">
+            <button id="start_button" class="SFX1"  data-sound="audios/open.wav">
             <div id="start_menu"></div>
             <span>start menu</span>
             </button>
-            <button id="vol_button">
+            <button id="vol_button" class=" SFX1"  data-sound="audios/open.wav">
             <div id="volume"></div>
             
             </button>
-            <button id="theme_button">
-            <div id="theme"></div>
-            <span></span>
-            </button>
-            <div class="taskbox" id="box1">
+            
+            <div class="taskbox SFX1"  data-sound="audios/open.wav" id="box1">
                 <span></span>
             </div>
-            <div  class="taskbox" id="box2">
+            <div  class="taskbox SFX1"  data-sound="audios/open.wav" id="box2">
                 <span></span>
             </div>
-            <div  class="taskbox" id="box3">
+            <div  class="taskbox SFX1"  data-sound="audios/open.wav" id="box3">
                 <span></span>
             </div>
-            <div  class="taskbox" id="box4">
+            <div  class="taskbox SFX1"  data-sound="audios/open.wav" id="box4">
                 <span></span>
             </div>
             <div id="time_box"><div id="currtime">00:00</div></div>
@@ -342,10 +340,10 @@
             <button class="apps" data-window="about_user_window" >
                 <span>about</span>
             </button>
-            <button  class="apps" data-window="works_window" ><span>work</span></button>
-            <button  class="apps" data-window="socialz_window"><span>internet</span></button>
-            <button  class="apps" data-window="skillz_window"><span>contact</span></button>
-            <button class="apps" id="reload" data-window="reload"><span>restart</span></button>
+            <button  class="apps SFX1"  data-sound="audios/open.wav" data-window="works_window" ><span>work</span></button>
+            <button  class="apps SFX1"  data-sound="audios/open.wav" data-window="socialz_window"><span>internet</span></button>
+            <button  class="apps SFX1"  data-sound="audios/open.wav" data-window="skillz_window"><span>contact</span></button>
+            <button class="apps SFX1"  data-sound="audios/open.wav" id="reload" data-window="reload"><span>restart</span></button>
             
         </div>
         </div>

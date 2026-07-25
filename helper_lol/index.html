@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="classic">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>HARSHIT_OS v1.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ BOOT SCREEN ============ -->
+<div id="boot-screen.hidden">
+  <div class="boot-text">
+    <p>HARSHIT_OS (C) SYSTEM BIOS v1.0</p>
+    <p>CPU: BIO-INFORMATICS CORE @ 3.7 GHz</p>
+    <p>MEMORY TEST......... 640K OK</p>
+    <p>DETECTING DRIVES..... C: PROJECTS  D: SKILLS</p>
+    <p class="boot-blink">LOADING HARSHIT_OS<span class="dots"></span></p>
+  </div>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+  <p class="boot-skip">click anywhere to skip</p>
+</div>
+
+<!-- ============ CRT OVERLAY ============ -->
+<div id="crt-overlay"></div>
+
+<!-- ============ DESKTOP (tablet / desktop) ============ -->
+<div id="desktop">
+
+  <div class="desktop-icons">
+    <button class="icon" data-window="about" ondblclick="openWindow('about')" onclick="selectIcon(this)">
+      <div class="icon-glyph">👤</div>
+      <span>About_Me.txt</span>
+    </button>
+    <button class="icon" data-window="projects" ondblclick="openWindow('projects')" onclick="selectIcon(this)">
+      <div class="icon-glyph">🗂️</div>
+      <span>Projects</span>
+    </button>
+    <button class="icon" data-window="skills" ondblclick="openWindow('skills')" onclick="selectIcon(this)">
+      <div class="icon-glyph">🛠️</div>
+      <span>Skills.exe</span>
+    </button>
+    <button class="icon" data-window="resume" ondblclick="openWindow('resume')" onclick="selectIcon(this)">
+      <div class="icon-glyph">📄</div>
+      <span>Resume.pdf</span>
+    </button>
+    <button class="icon" data-window="contact" ondblclick="openWindow('contact')" onclick="selectIcon(this)">
+      <div class="icon-glyph">✉️</div>
+      <span>Contact.txt</span>
+    </button>
+    <button class="icon" data-window="bin" ondblclick="openWindow('bin')" onclick="selectIcon(this)">
+      <div class="icon-glyph">🗑️</div>
+      <span>Recycle Bin</span>
+    </button>
+  </div>
+
+  <p class="desktop-hint">double-click an icon to open a window · drag titlebars to move them</p>
+
+  <!-- ===== WINDOW: ABOUT ===== -->
+  <div class="window" id="win-about" data-title="About_Me.txt" style="top:70px; left:60px; width:420px;">
+    <div class="titlebar">
+      <span class="titlebar-text">👤 About_Me.txt — Notepad</span>
+      <div class="titlebar-btns">
+        <button onclick="minimizeWindow('about')">_</button>
+        <button onclick="maximizeWindow('about')">□</button>
+        <button onclick="closeWindow('about')">×</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Hi, I'm <strong>Harshit</strong> 👋</p>
+      <p>Engineering student at IIIT Vadodara International Campus Diu (ICD), currently wrapping up a bioinformatics internship — final week, still fighting with a phylogenetic tree that refuses to label itself nicely.</p>
+      <p>My coursework lives in computer science (data structures & algorithms) and I like courses like HS 102 (Science, Technology & Society) that make me argue about tech in plain English for once.</p>
+      <p>Outside of labs and lecture halls, I write and design games — mostly psychologically layered, metaphor-driven stuff. I'd rather a story implicate the player than just entertain them.</p>
+      <p class="signature">— Harshit</p>
+    </div>
+  </div>
+
+  <!-- ===== WINDOW: PROJECTS ===== -->
+  <div class="window" id="win-projects" data-title="Projects" style="top:60px; left:520px; width:480px;">
+    <div class="titlebar">
+      <span class="titlebar-text">🗂️ Projects — Explorer</span>
+      <div class="titlebar-btns">
+        <button onclick="minimizeWindow('projects')">_</button>
+        <button onclick="maximizeWindow('projects')">□</button>
+        <button onclick="closeWindow('projects')">×</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <details open>
+        <summary>🎮 Project Split</summary>
+        <p>A 2D psychological horror platformer — Silksong meets Inmost. A dual-world mechanic mirrors the protagonist Leo's dissociative episodes, distorting his own perception of what he's actually doing.</p>
+      </details>
+      <details>
+        <summary>🌒 Project: Hollow</summary>
+        <p>A companion narrative project reworked around three characters — Luna, an Alter-Ego, and Kai — pushed further into psychological horror and metaphorical resonance rather than literal scares.</p>
+      </details>
+      <details>
+        <summary>🌱 4CL Gene in Ocimum tenuiflorum</summary>
+        <p>Bioinformatics research report on 4-coumarate:CoA ligase (4CL) behaviour in Tulsi under abiotic stress — drought, salt, flooding, cold. Weekly progress reports, expanded discussion/limitations/future scope sections, and a phylogenetic tree that is finally behaving.</p>
+      </details>
+      <details>
+        <summary>📡 Smart Soil Moisture Detection (Team Proton)</summary>
+        <p>Non-contact soil moisture sensing using an HB100 Doppler radar module, envelope detection, two-stage op-amp amplification, RC low-pass filtering, and an ESP32. Debugged LTSpice sims through rail saturation, gain mismatches and LPF smoothing issues.</p>
+      </details>
+      <details>
+        <summary>🗺️ Transit Route Planner (C)</summary>
+        <p>Started as a single heavily-commented C file running Dijkstra, Prim's MST and BFS/DFS with a binomial heap — then refactored into a clean modular build with separate .c/.h files, file I/O and a Makefile.</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- ===== WINDOW: SKILLS ===== -->
+  <div class="window" id="win-skills" data-title="Skills.exe" style="top:220px; left:150px; width:400px;">
+    <div class="titlebar">
+      <span class="titlebar-text">🛠️ Skills.exe</span>
+      <div class="titlebar-btns">
+        <button onclick="minimizeWindow('skills')">_</button>
+        <button onclick="maximizeWindow('skills')">□</button>
+        <button onclick="closeWindow('skills')">×</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <ul class="skill-list">
+        <li><span>C Programming</span><div class="bar"><i style="width:88%"></i></div></li>
+        <li><span>Data Structures & Algorithms</span><div class="bar"><i style="width:82%"></i></div></li>
+        <li><span>Bioinformatics Tools</span><div class="bar"><i style="width:75%"></i></div></li>
+        <li><span>Circuit Simulation (LTSpice)</span><div class="bar"><i style="width:70%"></i></div></li>
+        <li><span>Embedded Systems (ESP32)</span><div class="bar"><i style="width:68%"></i></div></li>
+        <li><span>Game & Narrative Design</span><div class="bar"><i style="width:85%"></i></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== WINDOW: RESUME ===== -->
+  <div class="window" id="win-resume" data-title="Resume.pdf" style="top:130px; left:300px; width:380px;">
+    <div class="titlebar">
+      <span class="titlebar-text">📄 Resume.pdf — Preview</span>
+      <div class="titlebar-btns">
+        <button onclick="minimizeWindow('resume')">_</button>
+        <button onclick="maximizeWindow('resume')">□</button>
+        <button onclick="closeWindow('resume')">×</button>
+      </div>
+    </div>
+    <div class="window-body center-body">
+      <div class="pdf-icon">📄</div>
+      <p>Drop your actual résumé file in this folder and link it here.</p>
+      <a class="fake-btn" href="#" onclick="return false;">Download Resume</a>
+      <p class="tiny">(replace this link with your real resume.pdf)</p>
+    </div>
+  </div>
+
+  <!-- ===== WINDOW: CONTACT ===== -->
+  <div class="window" id="win-contact" data-title="Contact.txt" style="top:280px; left:560px; width:380px;">
+    <div class="titlebar">
+      <span class="titlebar-text">✉️ Contact.txt</span>
+      <div class="titlebar-btns">
+        <button onclick="minimizeWindow('contact')">_</button>
+        <button onclick="maximizeWindow('contact')">□</button>
+        <button onclick="closeWindow('contact')">×</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>GitHub: <a href="#" onclick="return false;">github.com/your-username</a></p>
+      <p>LinkedIn: <a href="#" onclick="return false;">linkedin.com/in/your-profile</a></p>
+      <p class="tiny">(swap these placeholders for your real links)</p>
+    </div>
+  </div>
+
+  <!-- ===== WINDOW: RECYCLE BIN ===== -->
+  <div class="window" id="win-bin" data-title="Recycle Bin" style="top:340px; left:200px; width:340px;">
+    <div class="titlebar">
+      <span class="titlebar-text">🗑️ Recycle Bin</span>
+      <div class="titlebar-btns">
+        <button onclick="minimizeWindow('bin')">_</button>
+        <button onclick="maximizeWindow('bin')">□</button>
+        <button onclick="closeWindow('bin')">×</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p class="tiny">deleted_conventional_portfolio_template.docx</p>
+      <p class="tiny">boring_resume_font.ttf</p>
+      <p class="tiny">generic_hero_section.psd</p>
+      <p style="margin-top:10px;">Nothing to see here. Everything worth keeping is on the desktop.</p>
+    </div>
+  </div>
+
+  <!-- ===== START MENU ===== -->
+  <div id="start-menu">
+    <div class="start-menu-side">HARSHIT_OS</div>
+    <div class="start-menu-items">
+      <button onclick="openWindow('about'); toggleStartMenu(false)">👤 About Me</button>
+      <button onclick="openWindow('projects'); toggleStartMenu(false)">🗂️ Projects</button>
+      <button onclick="openWindow('skills'); toggleStartMenu(false)">🛠️ Skills</button>
+      <button onclick="openWindow('resume'); toggleStartMenu(false)">📄 Resume</button>
+      <button onclick="openWindow('contact'); toggleStartMenu(false)">✉️ Contact</button>
+      <hr>
+      <button onclick="toggleTheme(); toggleStartMenu(false)">🎨 Switch Theme</button>
+    </div>
+  </div>
+
+  <!-- ===== TASKBAR ===== -->
+  <div id="taskbar">
+    <button id="start-btn" onclick="toggleStartMenu()">
+      <span class="start-logo">⊞</span> Menu
+    </button>
+    <div id="taskbar-running"></div>
+    <div id="tray">
+      <button id="volume-btn" onclick="toggleVolume()" title="Toggle sound">🔊</button>
+      <button id="theme-btn" onclick="toggleTheme()" title="Switch theme">🎨</button>
+      <div id="clock">00:00 AM</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MOBILE: OLD FEATURE-PHONE UI ============ -->
+<div id="phone">
+  <div class="phone-body">
+    <div class="phone-speaker"></div>
+    <div class="phone-screen">
+      <div class="phone-statusbar">
+        <span class="signal">📶</span>
+        <span class="carrier">HARSHIT-NET</span>
+        <span class="battery">🔋</span>
+      </div>
+      <div class="phone-clock" id="phone-clock">00:00</div>
+
+      <div class="phone-content" id="phone-content">
+        <!-- populated by JS -->
+      </div>
+
+      <div class="phone-softlabels">
+        <span id="soft-left">Select</span>
+        <span id="soft-right">Back</span>
+      </div>
+    </div>
+
+    <div class="phone-nav">
+      <button class="nav-up" onclick="phoneNav('up')">▲</button>
+      <button class="nav-left" onclick="phoneNav('left')">◀</button>
+      <button class="nav-ok" onclick="phoneNav('ok')">OK</button>
+      <button class="nav-right" onclick="phoneNav('right')">▶</button>
+      <button class="nav-down" onclick="phoneNav('down')">▼</button>
+    </div>
+
+    <div class="phone-softkeys">
+      <button onclick="phoneNav('ok')">Select</button>
+      <button onclick="phoneNav('back')">Back</button>
+    </div>
+
+    <div class="phone-keypad">
+      <button>1</button><button>2<small>ABC</small></button><button>3<small>DEF</small></button>
+      <button>4<small>GHI</small></button><button>5<small>JKL</small></button><button>6<small>MNO</small></button>
+      <button>7<small>PQRS</small></button><button>8<small>TUV</small></button><button>9<small>WXYZ</small></button>
+      <button>*</button><button>0</button><button>#</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
