@@ -341,7 +341,7 @@ background-image: url("./artworks/social/dicord1.png");
   background-color: #8d697abb;
 }
 #links_below span{
-  position: absolute;
+  position: relative;
   line-height: 30px;
   top:0px;
   left:19px;
@@ -481,3 +481,29 @@ width: 440px;
     box-shadow: 4px 0 0 0 #0d2b45,-4px 0 0 0 #0d2b45,0 4px 0 0 #0d2b45,0 -4px 0 0 #0d2b45,inset -6px 0 0 0 #544e68,inset 0 0px 0 0 #544e68,inset 0px 0 0 0 #8d697a;
 }
 
+@media screen and (max-width: 768px) {
+  #about_user_window .content{
+    height: 100%;
+}
+#links #chess{
+  position: absolute;
+  
+  top:20px;
+  left:250px;
+}
+#links span{
+  position: relative;
+  top:60px;
+  left:-100px;
+}
+#links_below{
+  /* position: absolute;
+  bottom:20px;
+  left:40px; */
+  height:fit-content;
+  /* width: 87%;
+  border-radius: 10px;
+  background-color: #8d697abb; */
+}
+
+ }   
