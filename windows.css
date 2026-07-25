@@ -506,4 +506,10 @@ width: 440px;
   background-color: #8d697abb; */
 }
 
+.info{
+    height: fit-content;
+    line-height: 30px;
+    padding-bottom: 30px;
+    
+}
  }   
