@@ -1,4 +1,6 @@
-/* Import a pixelated/monospace retro font to match the image style */
+div {
+    -webkit-tap-highlight-color: transparent;
+}/* Import a pixelated/monospace retro font to match the image style */
 
 #about_user_window{
 height: 800px;
@@ -512,4 +514,5 @@ width: 440px;
     padding-bottom: 30px;
     
 }
+
  }   
