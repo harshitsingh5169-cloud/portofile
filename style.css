@@ -522,7 +522,7 @@ button:active {
 
 
 /* ================= MOBILE ================= */
-@media screen and (max-width: -1px) {
+@media screen and (max-width: 768px) {
 
     body{
         overflow-y:auto;
@@ -530,7 +530,7 @@ button:active {
     }
 
     #main_screen{
-        height:auto;
+        height:100vh;
         min-height:100vh;
     }
 
